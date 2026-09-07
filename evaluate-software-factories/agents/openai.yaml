@@ -1,0 +1,3 @@
+interface:
+  display_name: "Evaluate Software Factories"
+  short_description: "Compare agentic projects across 18 SDLC capabilities"
