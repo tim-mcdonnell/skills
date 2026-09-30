@@ -11,8 +11,7 @@ A question about what is *possible* is answered by what the code allows - an int
 All clones live in `~/.cache/dig/<org>__<repo>`.
 Never clone into the current project or a sibling directory.
 
-1. Check the cache for clones last used more than 7 days ago (directory mtime).
-   If any exist, ask the user once, multi-select, which to delete; skip silently when nothing is stale.
+1. Delete clones last used more than 7 days ago (directory mtime) without asking; they are only cache.
 2. For each codebase the question touches, reuse the cached clone if present; otherwise `git clone --filter=blob:none` into the cache.
    Resolve the canonical repo URL yourself when only given a project name.
 3. Fetch and fast-forward each clone, then `touch` its directory.
